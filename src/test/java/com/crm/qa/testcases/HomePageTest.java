@@ -28,7 +28,7 @@ public class HomePageTest extends TestBase {
 	
 	@BeforeMethod
 	public void setUp() {
-		initialization();
+		initialization("browser","");
 		testUtil = new TestUtil();
 		contactsPage = new ContactsPage();
 		loginPage = new LoginPage();

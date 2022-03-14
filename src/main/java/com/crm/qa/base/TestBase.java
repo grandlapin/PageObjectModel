@@ -37,15 +37,14 @@ public class TestBase {
 	}
 	
 	
-	public static void initialization(){
-		String browserName = prop.getProperty("browser");
+	public static void initialization(String browserName, String url){
 		
-		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "/Users/naveenkhunteta/Downloads/chromedriver");	
+		if(browserName.equalsIgnoreCase("chrome")){
+			System.setProperty("webdriver.chrome.driver", "/Users/geoff/Downloads/drivers/chromedriver.exe");
 			driver = new ChromeDriver(); 
 		}
-		else if(browserName.equals("FF")){
-			System.setProperty("webdriver.gecko.driver", "/Users/naveenkhunteta/Documents/SeleniumServer/geckodriver");	
+		else if(browserName.equalsIgnoreCase("FF")){
+			System.setProperty("webdriver.gecko.driver", "/Users/geoff/Downloads/drivers/geckodriver.exe");
 			driver = new FirefoxDriver(); 
 		}
 		
@@ -61,7 +60,9 @@ public class TestBase {
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
-		driver.get(prop.getProperty("url"));
+		driver.get(url);
+
+
 		
 	}
 	

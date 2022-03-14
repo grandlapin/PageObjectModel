@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestNG All suite"  >
+    <suite-files>
+        <suite-file path="WebTraining003.xml" />
+        <suite-file path="HomePageTests.xml" />
+        <suite-file path="FlightPageTests.xml" />
+    </suite-files>
+</suite>

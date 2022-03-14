@@ -1,0 +1,12 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Web Training 003 Suite">
+    <test name = "All tests">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="url" value="https://www.spirit.com/?homeRedesign=true"></parameter>
+        <classes>
+            <class name = "com.companyname.testcases.HomePageTest" />
+            <class name = "com.companyname.testcases.FlightPageTest" />
+        </classes>
+    </test>
+</suite>

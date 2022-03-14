@@ -19,7 +19,7 @@ public class LoginPageTest extends TestBase{
 	
 	@BeforeMethod
 	public void setUp(){
-		initialization();
+		initialization("browser","");
 		loginPage = new LoginPage();	
 	}
 	
